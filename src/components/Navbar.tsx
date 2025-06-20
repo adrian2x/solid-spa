@@ -27,7 +27,7 @@ export default function Navbar() {
       <div class='mx-2 flex-1 px-2'>Navbar</div>
       <Show when={!state.loading && !state.data}>
         <div class='flex-none'>
-          <ul class='menu menu-horizontal'>
+          <ul class='menu-horizontal'>
             <li>
               <Login />
             </li>
@@ -36,7 +36,6 @@ export default function Navbar() {
       </Show>
       <Show when={state.data!}>
         <div class='flex gap-2'>
-          <input type='text' placeholder='Search' class='input input-bordered w-24 md:w-auto' />
           <div class='dropdown dropdown-end'>
             <Avatar src={state.data.photoURL} />
             <ul

@@ -5,5 +5,9 @@ export function Login() {
   const app = useFirebaseApp()
   const signIn = () => signInWithPopup(getAuth(app), new GoogleAuthProvider())
 
-  return <button onClick={signIn}>Log In</button>
+  return (
+    <button class='btn btn-ghost' onClick={signIn}>
+      Log In
+    </button>
+  )
 }

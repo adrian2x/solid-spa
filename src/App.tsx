@@ -1,10 +1,11 @@
 import type { Component } from 'solid-js'
 import { lazy } from 'solid-js'
-import { Router, Route } from '@solidjs/router'
+import { Router, Route, A } from '@solidjs/router'
 import Navbar from './components/Navbar'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
+const ButtonPage = lazy(() => import('./pages/Button'))
 
 const App: Component = () => {
   return (
@@ -17,16 +18,20 @@ const App: Component = () => {
           <Router>
             <Route path='/' component={Home} />
             <Route path='/about' component={About} />
+            <Route path='/button' component={ButtonPage} />
           </Router>
         </div>
         <div class='drawer-side'>
           <label for='nav-drawer' aria-label='close sidebar' class='drawer-overlay'></label>
           <ul class='menu bg-base-200 min-h-full w-80 p-4'>
             <li>
-              <a>Sidebar Item 1</a>
+              <a href='/'>Home</a>
             </li>
             <li>
-              <a>Sidebar Item 2</a>
+              <a href='/about'>About</a>
+            </li>
+            <li>
+              <a href='/button'>Buttons</a>
             </li>
           </ul>
         </div>
