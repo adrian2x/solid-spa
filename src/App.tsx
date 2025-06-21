@@ -16,6 +16,7 @@ const SkeletonPage = lazy(() => import('./pages/Skeleton'))
 const LoadingPage = lazy(() => import('./pages/Loading'))
 const DockPage = lazy(() => import('./pages/Dock'))
 const ListPage = lazy(() => import('./pages/List'))
+const CheckboxPage = lazy(() => import('./pages/Checkbox'))
 
 const App: Component = () => {
   return (
@@ -38,6 +39,7 @@ const App: Component = () => {
             <Route path='/loading' component={LoadingPage} />
             <Route path='/dock' component={DockPage} />
             <Route path='/alert' component={AlertPage} />
+            <Route path='/checkbox' component={CheckboxPage} />
           </Router>
         </div>
         <div class='drawer-side'>
@@ -78,6 +80,9 @@ const App: Component = () => {
             </MenuItem>
             <MenuItem>
               <a href='/loading'>Loading</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='/checkbox'>Checkbox</a>
             </MenuItem>
           </Menu>
         </div>
