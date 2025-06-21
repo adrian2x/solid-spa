@@ -20,6 +20,7 @@ const CheckboxPage = lazy(() => import('./pages/Checkbox'))
 const TextInputPage = lazy(() => import('./pages/TextInput'))
 const SelectPage = lazy(() => import('./pages/Select'))
 const RadioPage = lazy(() => import('./pages/Radio'))
+const TogglePage = lazy(() => import('./pages/Toggle'))
 
 const App: Component = () => {
   return (
@@ -46,6 +47,7 @@ const App: Component = () => {
             <Route path='/input' component={TextInputPage} />
             <Route path='/select' component={SelectPage} />
             <Route path='/radio' component={RadioPage} />
+            <Route path='/toggle' component={TogglePage} />
           </Router>
         </div>
         <div class='drawer-side'>
@@ -98,6 +100,9 @@ const App: Component = () => {
             </MenuItem>
             <MenuItem>
               <a href='/select'>Select</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='/toggle'>Toggle</a>
             </MenuItem>
           </Menu>
         </div>
