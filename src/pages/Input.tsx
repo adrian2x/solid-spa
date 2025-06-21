@@ -1,6 +1,6 @@
-import { Input, TextInput } from '../components/TextInput'
+import { Input, TextInput } from '../components/Input'
 
-export default function TextInputPage() {
+export default function InputPage() {
   return (
     <div class='prose pt-10'>
       <div class='example'>
