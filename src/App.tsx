@@ -14,6 +14,7 @@ const TabsPage = lazy(() => import('./pages/Tabs'))
 const SkeletonPage = lazy(() => import('./pages/Skeleton'))
 const LoadingPage = lazy(() => import('./pages/Loading'))
 const DockPage = lazy(() => import('./pages/Dock'))
+const ListPage = lazy(() => import('./pages/List'))
 
 const App: Component = () => {
   return (
@@ -30,6 +31,7 @@ const App: Component = () => {
             <Route path='/modal' component={ModalPage} />
             <Route path='/dropdown' component={DropdownPage} />
             <Route path='/menu' component={MenuPage} />
+            <Route path='/list' component={ListPage} />
             <Route path='/tabs' component={TabsPage} />
             <Route path='/skeleton' component={SkeletonPage} />
             <Route path='/loading' component={LoadingPage} />
@@ -56,6 +58,9 @@ const App: Component = () => {
             </MenuItem>
             <MenuItem>
               <a href='/menu'>Menu</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='/list'>List</a>
             </MenuItem>
             <MenuItem>
               <a href='/dock'>Dock</a>
