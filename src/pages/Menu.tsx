@@ -1,4 +1,4 @@
-import { Menu, Item } from '../components/Menu'
+import { Menu, MenuItem } from '../components/Menu'
 
 export default function MenuPage() {
   return (
@@ -7,15 +7,15 @@ export default function MenuPage() {
         <h3>Menu</h3>
         <div class='row gap-2'>
           <Menu class='w-56'>
-            <Item>
+            <MenuItem>
               <a href=''>Item 1</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 2</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 3</a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>
@@ -23,16 +23,16 @@ export default function MenuPage() {
         <h3>Menu with title</h3>
         <div class='row gap-2'>
           <Menu class='w-56'>
-            <Item title>Title</Item>
-            <Item>
+            <MenuItem title>Title</MenuItem>
+            <MenuItem>
               <a href=''>Item 1</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 2</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 3</a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function MenuPage() {
         <h3>Menu with icon only (horizontal)</h3>
         <div class='row gap-2'>
           <Menu horizontal>
-            <Item>
+            <MenuItem>
               <a>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -57,8 +57,8 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -74,8 +74,8 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -91,7 +91,7 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>
@@ -100,7 +100,7 @@ export default function MenuPage() {
         <h3>Menu with tooltips</h3>
         <div class='row gap-2'>
           <Menu>
-            <Item>
+            <MenuItem>
               <a class='tooltip tooltip-right' data-tip='Home'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -116,8 +116,8 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a class='tooltip tooltip-right' data-tip='Details'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -133,8 +133,8 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a class='tooltip tooltip-right' data-tip='Stats'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -150,7 +150,7 @@ export default function MenuPage() {
                   />
                 </svg>
               </a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>
@@ -159,38 +159,38 @@ export default function MenuPage() {
         <h3>Collapsible submenu</h3>
         <div class='row gap-2'>
           <Menu class='w-56'>
-            <Item>
+            <MenuItem>
               <a href=''>Item 1</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <details open>
                 <summary>Parent</summary>
                 <Menu>
-                  <Item>
+                  <MenuItem>
                     <a href=''>Subitem 1</a>
-                  </Item>
-                  <Item>
+                  </MenuItem>
+                  <MenuItem>
                     <a href=''>Subitem 2</a>
-                  </Item>
-                  <Item>
+                  </MenuItem>
+                  <MenuItem>
                     <details open>
                       <summary>Parent</summary>
                       <Menu>
-                        <Item>
+                        <MenuItem>
                           <a href=''>Subitem 1</a>
-                        </Item>
-                        <Item>
+                        </MenuItem>
+                        <MenuItem>
                           <a href=''>Subitem 2</a>
-                        </Item>
+                        </MenuItem>
                       </Menu>
                     </details>
-                  </Item>
+                  </MenuItem>
                 </Menu>
               </details>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 3</a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>
@@ -199,38 +199,38 @@ export default function MenuPage() {
         <h3>Collapsible submenu (responsive)</h3>
         <div class='row gap-2'>
           <Menu class='lg:menu-horizontal bg-base-200 rounded-box lg:mb-64'>
-            <Item>
+            <MenuItem>
               <a href=''>Item 1</a>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <details open>
                 <summary>Parent item</summary>
                 <Menu>
-                  <Item>
+                  <MenuItem>
                     <a href=''>Subitem 1</a>
-                  </Item>
-                  <Item>
+                  </MenuItem>
+                  <MenuItem>
                     <a href=''>Subitem 2</a>
-                  </Item>
-                  <Item>
+                  </MenuItem>
+                  <MenuItem>
                     <details open>
                       <summary>Parent</summary>
                       <Menu>
-                        <Item>
+                        <MenuItem>
                           <a href=''>Subitem 1</a>
-                        </Item>
-                        <Item>
+                        </MenuItem>
+                        <MenuItem>
                           <a href=''>Subitem 2</a>
-                        </Item>
+                        </MenuItem>
                       </Menu>
                     </details>
-                  </Item>
+                  </MenuItem>
                 </Menu>
               </details>
-            </Item>
-            <Item>
+            </MenuItem>
+            <MenuItem>
               <a href=''>Item 3</a>
-            </Item>
+            </MenuItem>
           </Menu>
         </div>
       </div>

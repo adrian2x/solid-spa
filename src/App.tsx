@@ -2,6 +2,7 @@ import type { Component } from 'solid-js'
 import { lazy } from 'solid-js'
 import { Router, Route, A } from '@solidjs/router'
 import Navbar from './components/Navbar'
+import { MenuItem, Menu } from './components/Menu'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -11,6 +12,8 @@ const DropdownPage = lazy(() => import('./pages/Dropdown'))
 const MenuPage = lazy(() => import('./pages/Menu'))
 const TabsPage = lazy(() => import('./pages/Tabs'))
 const SkeletonPage = lazy(() => import('./pages/Skeleton'))
+const LoadingPage = lazy(() => import('./pages/Loading'))
+const DockPage = lazy(() => import('./pages/Dock'))
 
 const App: Component = () => {
   return (
@@ -29,36 +32,44 @@ const App: Component = () => {
             <Route path='/menu' component={MenuPage} />
             <Route path='/tabs' component={TabsPage} />
             <Route path='/skeleton' component={SkeletonPage} />
+            <Route path='/loading' component={LoadingPage} />
+            <Route path='/dock' component={DockPage} />
           </Router>
         </div>
         <div class='drawer-side'>
           <label for='nav-drawer' aria-label='close sidebar' class='drawer-overlay'></label>
-          <ul class='menu bg-base-200 min-h-full w-80 p-4'>
-            <li>
+          <Menu class='min-h-full w-80 p-4'>
+            <MenuItem>
               <a href='/'>Home</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/about'>About</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/button'>Buttons</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/modal'>Modal</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/dropdown'>Dropdown</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/menu'>Menu</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
+              <a href='/dock'>Dock</a>
+            </MenuItem>
+            <MenuItem>
               <a href='/tabs'>Tabs</a>
-            </li>
-            <li>
+            </MenuItem>
+            <MenuItem>
               <a href='/skeleton'>Skeleton</a>
-            </li>
-          </ul>
+            </MenuItem>
+            <MenuItem>
+              <a href='/loading'>Loading</a>
+            </MenuItem>
+          </Menu>
         </div>
       </div>
     </div>

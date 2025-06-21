@@ -1,6 +1,25 @@
-export function Menu({ horizontal, xs, sm, md, lg, xl, ...props }) {
+import type { JSX } from 'solid-js'
+
+export function Menu({
+  horizontal,
+  xs,
+  sm,
+  md,
+  lg,
+  xl,
+  ...props
+}: {
+  horizontal?: boolean
+  xs?: boolean
+  sm?: boolean
+  md?: boolean
+  lg?: boolean
+  xl?: boolean
+  class?: string
+  classList?: Record<string, boolean>
+} & JSX.HTMLAttributes<HTMLDivElement>) {
   return (
-    <ul
+    <div
       {...props}
       class={['not-prose menu bg-base-200 rounded-box', props.class || ''].join(' ')}
       classList={{
@@ -13,11 +32,23 @@ export function Menu({ horizontal, xs, sm, md, lg, xl, ...props }) {
         'menu-md': md
       }}>
       {props.children}
-    </ul>
+    </div>
   )
 }
 
-export function Item({ disabled, title, active, ...props }) {
+export function MenuItem({
+  disabled,
+  title,
+  active,
+  ...props
+}: {
+  disabled?: boolean
+  title?: boolean
+  active?: boolean
+} & JSX.HTMLAttributes<HTMLLIElement> & {
+    class?: string
+    classList?: Record<string, boolean>
+  }) {
   return (
     <li
       {...props}

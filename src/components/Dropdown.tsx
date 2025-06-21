@@ -7,7 +7,10 @@ export function Dropdown({ id, target, ...props }) {
         {target}
       </Button>
       <ul
-        class='not-prose dropdown menu w-52 rounded-box bg-base-100 shadow-sm'
+        class={[
+          'not-prose dropdown menu w-52 rounded-box bg-base-100 shadow-sm',
+          props.class || ''
+        ].join(' ')}
         popover
         id={id}
         style='position-anchor:--anchor-1'>
