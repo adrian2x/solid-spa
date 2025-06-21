@@ -6,6 +6,7 @@ import { MenuItem, Menu } from './components/Menu'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
+const AlertPage = lazy(() => import('./pages/Alert'))
 const ButtonPage = lazy(() => import('./pages/Button'))
 const ModalPage = lazy(() => import('./pages/Modal'))
 const DropdownPage = lazy(() => import('./pages/Dropdown'))
@@ -36,6 +37,7 @@ const App: Component = () => {
             <Route path='/skeleton' component={SkeletonPage} />
             <Route path='/loading' component={LoadingPage} />
             <Route path='/dock' component={DockPage} />
+            <Route path='/alert' component={AlertPage} />
           </Router>
         </div>
         <div class='drawer-side'>
@@ -46,6 +48,9 @@ const App: Component = () => {
             </MenuItem>
             <MenuItem>
               <a href='/about'>About</a>
+            </MenuItem>
+            <MenuItem>
+              <a href='/alert'>Alert</a>
             </MenuItem>
             <MenuItem>
               <a href='/button'>Buttons</a>
