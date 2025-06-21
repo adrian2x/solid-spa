@@ -15,7 +15,11 @@ export function Dropdown({ id, target, ...props }) {
         id={id}
         style='position-anchor:--anchor-1'>
         {Array.from(props.children).map((child, index) => {
-          return <li key={index}>{child}</li>
+          return (
+            <li key={index} class='min-h-[40px]'>
+              {child}
+            </li>
+          )
         })}
       </ul>
     </div>

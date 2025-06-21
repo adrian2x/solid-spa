@@ -56,7 +56,8 @@ export function MenuItem({
         ...props.classList,
         'menu-disabled': disabled,
         'menu-title': title,
-        'menu-active': active
+        'menu-active': active,
+        'min-h-[40px]': true
       }}>
       {props.children}
     </li>
