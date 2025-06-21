@@ -10,6 +10,7 @@ const ModalPage = lazy(() => import('./pages/Modal'))
 const DropdownPage = lazy(() => import('./pages/Dropdown'))
 const MenuPage = lazy(() => import('./pages/Menu'))
 const TabsPage = lazy(() => import('./pages/Tabs'))
+const SkeletonPage = lazy(() => import('./pages/Skeleton'))
 
 const App: Component = () => {
   return (
@@ -27,6 +28,7 @@ const App: Component = () => {
             <Route path='/dropdown' component={DropdownPage} />
             <Route path='/menu' component={MenuPage} />
             <Route path='/tabs' component={TabsPage} />
+            <Route path='/skeleton' component={SkeletonPage} />
           </Router>
         </div>
         <div class='drawer-side'>
@@ -52,6 +54,9 @@ const App: Component = () => {
             </li>
             <li>
               <a href='/tabs'>Tabs</a>
+            </li>
+            <li>
+              <a href='/skeleton'>Skeleton</a>
             </li>
           </ul>
         </div>
