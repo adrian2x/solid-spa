@@ -21,6 +21,7 @@ const InputPage = lazy(() => import('./pages/Input'))
 const SelectPage = lazy(() => import('./pages/Select'))
 const RadioPage = lazy(() => import('./pages/Radio'))
 const TogglePage = lazy(() => import('./pages/Toggle'))
+const CollapsePage = lazy(() => import('./pages/Collapse'))
 
 const App: Component = () => {
   const menu = () => (
@@ -34,6 +35,9 @@ const App: Component = () => {
         </MenuItem>
         <MenuItem>
           <a href='/button'>Buttons</a>
+        </MenuItem>
+        <MenuItem>
+          <a href='/collapse'>Collapse</a>
         </MenuItem>
         <MenuItem>
           <a href='/modal'>Modal</a>
@@ -106,6 +110,7 @@ const App: Component = () => {
               <Route path='/select' component={SelectPage} />
               <Route path='/radio' component={RadioPage} />
               <Route path='/toggle' component={TogglePage} />
+              <Route path='/collapse' component={CollapsePage} />
             </Router>
           </div>
         </div>
