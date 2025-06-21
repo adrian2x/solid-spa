@@ -9,7 +9,7 @@ const ButtonPage = lazy(() => import('./pages/Button'))
 
 const App: Component = () => {
   return (
-    <>
+    <div>
       <div class='drawer'>
         <input id='nav-drawer' type='checkbox' class='drawer-toggle' />
         <div class='drawer-content flex flex-col'>
@@ -36,7 +36,7 @@ const App: Component = () => {
           </ul>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
