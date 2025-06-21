@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
 const ButtonPage = lazy(() => import('./pages/Button'))
+const ModalPage = lazy(() => import('./pages/Modal'))
 
 const App: Component = () => {
   return (
@@ -19,6 +20,7 @@ const App: Component = () => {
             <Route path='/' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/button' component={ButtonPage} />
+            <Route path='/modal' component={ModalPage} />
           </Router>
         </div>
         <div class='drawer-side'>
