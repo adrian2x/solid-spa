@@ -24,7 +24,9 @@ export default function Navbar() {
           </svg>
         </label>
       </div>
-      <div class='mx-2 flex-1 px-2'>Navbar</div>
+      <a href='/' class='mx-2 flex-1 px-2'>
+        Navbar
+      </a>
       <Show when={!state.loading && !state.data}>
         <div class='flex-none'>
           <ul class='menu-horizontal'>
